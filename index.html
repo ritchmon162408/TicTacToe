@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>TIC-TAC-TOE</h1>
+            <!-- Tic-Tac-Toe Board -->
+            <div class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <!-- Score Section -->
+            <div class="score">
+                <div class="score-item">
+                    <p>PLAYER (X)</p>
+                    <h2 id="player-score">0</h2>
+                </div>
+                <div class="score-item">
+                    <p>TIE</p>
+                    <h2 id="tie-score">0</h2>
+                </div>
+                <div class="score-item">
+                    <p>COMPUTER (O)</p>
+                    <h2 id="computer-score">0</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game History -->
+        <div class="history">
+            <h1>GAME HISTORY</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>GAME ID</th>
+                        <th>WINNER</th>
+                        <th>TIMESTAMP</th>
+                    </tr>
+                </thead>
+                <tbody id="history-body">
+                    <!-- History rows will be appended here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
